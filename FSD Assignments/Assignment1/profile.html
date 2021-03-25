@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="form.css" >
+<style>
+  HTML CSSResult Skip Results Iframe
+EDIT ON
+body{
+  font-family: 'Nunito', sans-serif;
+  padding: 50px;
+  background-color: cadetblue;
+}
+.card{
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: 14px 80px 18px 36px;
+  cursor: pointer;
+}
+
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card h3{
+  font-weight: 600;
+}
+
+.card img{
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  max-height: 120px;
+}
+
+.card-1{
+  background-image:url('img/card1.png') ;
+      background-repeat:repeat-y;
+    background-position: right;
+    background-size: 80px;
+    box-shadow:5px red;
+}
+
+.card-2{
+   background-image: url('img/card2.png');
+      background-repeat: repeat-y;
+    background-position: right;
+    background-size: 80px;
+}
+
+.card-3{
+   background-image: url('img/card3.jfif');
+      background-repeat: repeat-y;
+    background-position: right;
+    background-size: 80px;
+}
+
+@media(max-width: 990px){
+  .card{
+    margin: 20px;
+  }
+} 
+
+.img{
+    background-image: url('img/lights.jfif');
+    min-height: 600px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#row {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: white;
+    margin-top: -100px;
+}
+#ud{
+    width: 200px;
+    border-radius: 100%;
+    margin-top: 10px;
+}
+.wrapper{
+            width: 500px;
+            margin: 0 auto;
+            box-shadow: 10px;
+        }
+        header{
+            width: 100%;
+            min-height: 50px;
+            
+        }
+        section{
+            width: 100%;
+            min-height: 50px;
+            
+        }
+        footer{
+            width: 100%;
+            min-height: 50px;
+           
+        }
+        aside{
+            width:48%;
+            min-height: 50px;
+            
+            float: right;
+        }
+        .main-content {
+            width: 75%;
+            
+            min-height: 50px;
+        }
+        
+        #uday5{
+            width: 600px;
+            height: 200px;
+        }
+        #uday3{
+            width: 340px;
+            height: 490px;
+        }
+        #uday1{
+            width: 250px;
+            height: 280px;
+        }
+        #uday2{
+            width: 250px;
+            height: 210px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .img1{
+          width: 350px;;
+        }
+        .fa{
+          color: black;
+        }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Agent Corner</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="profile.html">Agents details</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Looking for Agent  
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="requestform.html">Request Agent</a></li>
+                  <li><a class="dropdown-item" href="mailto:rallapalliuck007@gmail.com">Mail Agent</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Justice Shall Prevail</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+   <div class="img"></div>
+   <div class="row  col-md-8 mx-auto" id="row"><img id="ud" src="img/ochi.jpg" /></div>
+<br>
+<div>
+    <h1 class="h1 text-danger text-center">Auriu Ochi</h1>
+</div>
+<br>
+<br>
+<br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-6"><i><b>Agent Ochi solved 179 cases till this day with perfect track record.
+                There are no pending or unsolved cases in his entire carrier. 
+                He got the best track record, quick in his wit and mainly never fails. His favourite word is "Eye to Eye my Friend!" </i></b></div> 
+           <div class="col-lg-6 col-sm-6"><i><b>
+            He is the A1 performer in the batch.Agent Corner is proud to declare that agent ochi is the best
+            detective in his batch. He is witty, highly skilled, goody in two shoes what not.
+            He surpasses his limits then and there itself for continously upgrading himself.
+            </i></b> </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card card-1 text-danger ">
+            <h3><b>Hobbies</b></h3>
+            <p><b>Dance, Painting, Learning new skills, Gym</b></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-2">
+            <h3>Intrests</h3>
+            <p><b>Anime, Solving Crime Cases and Puzzles</b></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-3">
+            <h3>Skills</h3>
+            <p><b>Mentalist, Investigative and Analytical Skills</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+       
+   <br>
+   <h1 class="text text-danger text-center">Ochi Logo</h1>
+   <center><video controls width="1000" autoplay>
+        <source src = "img/ochi.mp4" type="video/mp4" />
+    </video></center>
+   <br>
+   <br>
+    <div class="container shadow p-3 mb-5 bg-white rounded">
+      <br><br>
+   <div class="wrapper">
+    <aside><img id="uday3" src="img/uday3.jpg" /></aside>
+    <header><img id="uday1" src="img/uday1.jpg" /></header>
+    <section><img  id="uday2" src="img/uday2.jpg" /></section>
+    <footer><img id="uday5" src="img/uday5.jpg" /></footer> 
+    <div class = "main-content"></div>
+    
+</div>
+    </div>
+    <i class="fa fa-instagram" aria-hidden="true"></i>
+    <div class="container text-light bg-dark">
+      <div class="row">
+      
+          <div class="col-lg-6 col-sm-6">
+            <br>
+            <b><h4>About Agent-Corner</h4></b><i>Agent-Corner is a reference and education resource for professionals who work in the investigation industry, including private investigators, police detectives, crime scene investigation experts, security specialists, and research professionals. You’ll find hundreds of how-to articles, product reviews, research tools, request agents and much more.</i></div>
+            <div class="col-lg-6 col-sm-6">
+              <br><h4><b>Disclaimer</b></h4><i>The articles on our website are general and do not constitute legal advice. Agent-Corner makes no warranties as to the accuracy of the information, does not endorse any companies, products, or services described here, and takes no liability for your use of this information. Also, we are an information provider and do not physically distribute anything here.
+         </i> </div>
+      </div>
+      <br>
+      <h6 class="text text-danger text-center">“The world is full of obvious things which nobody by any chance ever observes.” </h6>
+      <br>
+    </div>
+  <br>
+  <center><img class="img1"  src="img/border.png" /></center>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+</body>
+</html>
