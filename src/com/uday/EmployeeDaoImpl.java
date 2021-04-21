@@ -50,16 +50,19 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	}
 
 	@Override
-	public void deleteEmployee(int id) throws SQLException {
+	public void deleteEmployee(int id) {
 		// write code for delete
-		String del = "delete from employee where EmpId= " + id;
-		int count = 0;
-		count = statement.executeUpdate(del);
-
-		if (count > 0) {
+		String delete = "delete from employee where id= "+ id;
+		int c = 0;
+		try {
+			c = statement.executeUpdate(delete);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if (c > 0) {
 			System.out.println("Employee deleted!");
 		} else {
-			System.out.println("Not deleted");
+			System.out.println("No action taken!");
 		}
 	}
 
@@ -67,7 +70,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	public Employee getEmployeeById(int id) throws SQLException {
 		// write code for employee by id
 		Employee employee = null;
-		String get = "select * from employee where id = " + id;
+		String get = "select * from employee where empId = " + id;
 		ResultSet rs = statement.executeQuery(get);
 		if (rs.next()) {
 			int empId = rs.getInt("id");

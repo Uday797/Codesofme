@@ -1,5 +1,6 @@
 package com.uday;
 
+
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
@@ -8,7 +9,9 @@ public class Main {
 
 	public static void main(String[] args) throws SQLException {
 
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
+		@SuppressWarnings("unused")
 		EmployeeDao dao = EmployeeDaoFactory.getEmployeeDao();
 		System.out.println("Please select any one options");
 		System.out.println("******");
@@ -41,10 +44,15 @@ public class Main {
 		}
 		}
 
-		// EmployeeDao dao = EmployeeDaoFactory.getEmployeeDao();
-		// Employee employee = new Employee(1, "mark", "m@gmail.com");
-		// dao.addEmployee(employee);
+		
 
+		
+		
+	}
+
+	private static void insert() throws SQLException {
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter EmpId: ");
 		int id = sc.nextInt();
 		System.out.print("Enter Employee Name: ");
@@ -56,22 +64,30 @@ public class Main {
 		EmployeeDao dao1 = EmployeeDaoFactory.getEmployeeDao();
 		dao1.insertEmployee(employee);
 
-		List<Employee> list = dao1.getEmployees();
-		for (Employee emp : list) {
-			System.out.println(emp.toString());
-		}
 	}
 
-	private static void insert() {
+	private static void update() throws SQLException {
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter EmpId: ");
+		int id = sc.nextInt();
+		System.out.print("Enter Employee Name: ");
+		String name = sc.next();
+		System.out.print("Enter Employee Email: ");
+		String email = sc.next();
 
+		Employee employee = new Employee(id, name, email);
+		EmployeeDao dao1 = EmployeeDaoFactory.getEmployeeDao();
+		dao1.insertEmployee(employee);
 	}
 
-	private static void update() {
-
-	}
-
-	private static void delete() {
-
+	private static void delete() throws SQLException {
+		EmployeeDao dao = EmployeeDaoFactory.getEmployeeDao();
+		@SuppressWarnings("resource")
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Id to delete record");
+		int id = sc.nextInt();
+		dao.deleteEmployee(id);
 	}
 
 	private static void get() throws SQLException {
